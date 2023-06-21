@@ -39,9 +39,7 @@ pipeline {
       }
       stage('Stop test app') {
          steps {
-            sh(script: """
-               docker-compose down
-            """)
+            sh 'docker compose-down'
          }
       }
    }
